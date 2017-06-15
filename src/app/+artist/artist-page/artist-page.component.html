@@ -1,0 +1,69 @@
+<user-bar></user-bar>
+<artist-header (onArtistInfoReady)="onArtistInfoReady($event)"></artist-header>
+<div class="contentWrapper container" *ngIf="artistInfo">
+  <div class="content">
+    <div class="left">
+      <div class="head">
+        <div class="title">Songs</div>
+        <div class="settings">
+          <div class="optionName" *ngIf="songs && songs.length">Sort by</div>
+          <select
+            class="sortingCondition"
+            (change)="changeSortingCondition(changeSortingCondition.value)"
+            *ngIf="songs && songs.length"
+            #changeSortingCondition>
+            <option value="1">Most popular</option>
+            <option value="2">Most recent</option>
+          </select>
+        </div>
+      </div>
+      <div class="noSongs" *ngIf="!songs || !songs.length">No uploaded songs :(</div>
+      <div class="song" *ngFor="let song of songs">
+        <div class="cover" [class.noArtwork]="!song.artwork">
+          <img [src]="song.artwork" alt="Album cover" *ngIf="song.artwork">
+          <button class="play"></button>
+          <div class="timing">{{ song.length || 'not defined' }}</div>
+        </div>
+        <div class="info">
+          <div class="name">{{ song.title }}</div>
+          <div class="description">
+            <span>by {{ song.artistId }}</span>
+            <span>added {{ song.dateCreated | myPreparingSymbolicDate }}</span>
+            <span *ngIf="song.played">{{ song.played }} {{ song.played > 1 ? 'plays' : 'play' }}</span>
+          </div>
+          <div class="promote">
+            <button class="button white promote">Promote</button>
+            <div class="count" *ngIf="false">172<br>promoters</div>
+            <a [routerLink]="['/user/' + fan.id]" *ngFor="let fan of fans">
+              <img [src]="fan.avatar" alt="User avatar">
+            </a>
+          </div>
+          <button class="share" *ngIf="isUserLogged">Share</button>
+          <a class="share" *ngIf="!isUserLogged" [routerLink]="['/login']">Share</a>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="title">About</div>
+      <div class="about" *ngIf="artistInfo.description">{{ artistInfo.description }}</div>
+      <div class="members">
+        <div *ngFor="let member of members">
+          <img [src]="member.avatar || '../../../assets/img/default_avatar.jpg'" alt="Member avatar">
+          <div class="name">{{ member.name || 'Unknown user' }}</div>
+          <div class="role">{{ member.role || 'Unknown role' }}</div>
+        </div>
+      </div>
+      <div class="requestToBeAMember" *ngIf="isNotOwnPage">
+        <button class="button white" *ngIf="!isRequestToBeAMemberLoading && !isRequestToBeAMemberSent">Request to be a member</button>
+        <span class="loading" *ngIf="isRequestToBeAMemberLoading">Loading</span>
+        <span *ngIf="isRequestToBeAMemberSent && !isRequestToBeAMemberLoading">Request sent</span>
+      </div>
+      <div class="title" *ngIf="fans">Promoters ({{ fans.length }})
+        <a class="link" [routerLink]="['/artist/' + artistID + '/promoters']" *ngIf="fans.length">View all</a>
+      </div>
+      <div class="promoters" *ngIf="fans && fans.length">
+        <div *ngFor="let fan of fans"><img [src]="fan.avatar" alt="User avatar"></div>
+      </div>
+    </div>
+  </div>
+</div>

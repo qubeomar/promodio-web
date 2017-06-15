@@ -1,0 +1,33 @@
+<div class="registration popupContent" [class.loading]="isLoading">
+  <button class="close" (click)="closePopup()"></button>
+  <div class="left" *ngIf="!success">
+    <div class="title">Be part of<br>Movement</div>
+    <div class="description">On Promodio, only YOU decide which songs should be Popular. Make your vote count.</div>
+  </div>
+  <div class="right" *ngIf="!success">
+    <div class="simple">Create an account</div>
+    <a class="facebook noUserSelect" [routerLink]="['/registration-facebook']">Sign up with Facebook</a>
+    <div class="simple">or sign up with email</div>
+    <form [formGroup]="registrationForm">
+      <div class="field name">
+        <input type="text" name="name" placeholder="Name" [formControl]="name">
+      </div>
+      <div class="field email">
+        <input type="text" name="username" placeholder="Email" [formControl]="username">
+      </div>
+      <div class="field password">
+        <input type="password" name="password" placeholder="Password" [formControl]="password">
+      </div>
+    </form>
+    <button
+      class="button red standard noUserSelect"
+      (click)="check()"
+      [disabled]="name.hasError('incorrect') || password.hasError('incorrect') || username.hasError('incorrect')"
+    >Sign up</button>
+  </div>
+  <div class="success" *ngIf="success">
+    <div class="head">Thank you!</div>
+    <div class="body">We sent the further instructions to the your email.<br>Check it to activate your account.</div>
+    <a class="button red standard" [routerLink]="['/login']">Login page</a>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.artistRegistration {min-height: 100vh; padding-bottom: 30px; background: #000 url(../../../assets/img/artist-registration-bg.jpg) no-repeat center 0;}
+
+.header {padding-top: 40px;}
+
+.title {margin-bottom: 34px; font: 20px/24px Karla, sans-serif; color: #fff; text-align: center;}
+.stages {display: flex; justify-content: center; margin: 0 auto;}
+.stages > div {position: relative; width: 155px;}
+.stages > div:after {position: absolute; bottom: -34px; left: 0; display: block; width: 100%; height: 12px; background: rgba(242, 49, 72, .33); content: ""; transition: background .5s;}
+
+.stages > :first-child:after {right: 0; left: initial; width: 225px; border-radius: 3px 0 0 3px;}
+.stages > :last-child:after {width: 225px; border-radius: 0 3px 3px 0;}
+
+.stages > div > div {color: #979797;}
+.stages .index {position: relative; width: 33px; height: 33px; margin: 0 auto 12px; box-sizing: border-box; border: 1px solid #979797; border-radius: 50%; font: 18px/32px KarlaBold, sans-serif; text-align: center; transition: background .5s, border-color .5s;}
+.stages .active > div {color: #fff;}
+.stages .done .index {font-size: 0; background: url(../../../assets/img/icon-done.png) no-repeat 9px center;}
+.stages > div:not(:last-child) .index:after {position: absolute; top: 0; bottom: 0; left: 100%; width: 123px; height: 1px; margin: auto; background: #979797; content: "";}
+
+.stages .active:after, .stages .active .index {background: #f23148; border-color: #f23148;}
+.stages .name {font: 15px/18px KarlaBold, sans-serif; text-align: center; color: #979797;}
+
+.wrapper {width: 760px; margin: 54px auto 0; background: #fff; border-radius: 2px;}
+
+.success {height: 400px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.success span {font: 26px/24px Karla, sans-serif;}
+.success a {margin-top: 15px; font: 16px/20px Karla, sans-serif;}

@@ -1,0 +1,40 @@
+<user-bar></user-bar>
+<div class="artistRegistration">
+  <div class="header container">
+    <div class="title">We'll guide you on creating a new artist profile</div>
+    <div class="stages">
+      <div [class.done]="stageID > 0" [class.active]="stageID === 0">
+        <div class="index">1</div>
+        <div class="name">Profile</div>
+      </div>
+      <div [class.done]="stageID > 1" [class.active]="stageID === 1">
+        <div class="index">2</div>
+        <div class="name">Photo</div>
+      </div>
+      <div [class.done]="stageID > 2" [class.active]="stageID === 2">
+        <div class="index">3</div>
+        <div class="name">Song</div>
+      </div>
+      <div [class.done]="stageID > 3" [class.active]="stageID === 3">
+        <div class="index">4</div>
+        <div class="name">Members</div>
+      </div>
+    </div>
+    <div class="stagesIndicator">
+      <div [class.active]="stageID >= 0"></div>
+      <div [class.active]="stageID > 0"></div>
+      <div [class.active]="stageID > 1"></div>
+      <div [class.active]="stageID > 2"></div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <artist-registration-profile *ngIf="stageID === 0" (onready)="nextStage($event)"></artist-registration-profile>
+    <artist-registration-photo [artistID]="artistID" *ngIf="stageID === 1" (onready)="nextStage()"></artist-registration-photo>
+    <artist-registration-song [artistID]="artistID" *ngIf="stageID === 2" (onready)="nextStage()"></artist-registration-song>
+    <artist-registration-members [artistID]="artistID" *ngIf="stageID === 3" (onready)="nextStage()"></artist-registration-members>
+    <div class="success" *ngIf="stageID > 3">
+      <span>Done!</span>
+      <a class="link" [routerLink]="['/']">go to the main page</a>
+    </div>
+  </div>
+</div>

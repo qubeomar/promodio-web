@@ -1,0 +1,51 @@
+<div class="title">Add a song</div>
+<div class="noAudio" *ngIf="stateID === 0">
+  <div
+    (dragover)="dragOver($event, 'Audio')"
+    (dragleave)="dragLeave()"
+    (drop)="drop($event, 'audio')"
+    [class.active]="dragAudioActive"
+  >
+    Drag music file here<br>MP3 or AAC<br>Maximum 10MB
+    <div class="error" *ngIf="audioError">{{ audioError }}</div>
+  </div>
+  <button class="link" (click)="skip()">Skip for now</button>
+</div>
+<div class="audioInfo" *ngIf="stateID === 1" [class.loading]="isLoading">
+  <form class="left" #audioForm="ngForm" (ngSubmit)="submitStage(audioForm)">
+    <div class="subTitle">Song file</div>
+    <div class="audio">
+      <div class="name">{{ preparedData.audio.name }}</div>
+      <div class="size">{{ preparedData.audio.size / 1000000 | myToFixed:2 }} MB</div>
+    </div>
+    <div class="subTitle">Song title</div>
+    <input name="title" type="text" (keyup)="changeTitle(title.value)" #title ngModel>
+    <div class="subTitle agreementBlock">
+      <ios-checkbox (onValueChange)="agreementOnChange($event)"></ios-checkbox>
+      <span>I agree with Terms & Conditions</span>
+    </div>
+    <div class="description">You may only upload song that you own, created or have full reproduction rights over. Any unauthorized upload or copyrighted contend will be in violation of terms of use.</div>
+    <button class="button standard red" [disabled]="!agreement || !title.value">Continue</button>
+  </form>
+  <div class="right">
+    <div class="subTitle">Upload song artwork</div>
+    <div class="dropArea"
+      (dragover)="dragOver($event, 'Image')"
+      (dragleave)="dragLeave()"
+      (drop)="drop($event, 'image')"
+      [class.active]="dragAudioActive"
+    >
+      <span *ngIf="!imageSRC">
+        Drag song artwork here<br>
+        JPG or PNG<br>
+        200 x 200
+      </span>
+      <img [src]="imageSRC" alt="Artwork for this song" title="Artwork for this song" *ngIf="imageSRC && !imageError">
+      <div class="error" *ngIf="imageError">{{ imageError }}</div>
+    </div>
+  </div>
+  <div class="retry" *ngIf="">
+    <span>Error during the data loading</span>
+    <button class="button red standard" (click)="submitStage(audioForm, loadingState)">Retry</button>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="title">Members</div>
+<div class="description">Lorem ipsum<br>zxczxc</div>
+<div class="table">
+  <div class="head">
+    <div class="name">Name</div>
+    <div class="position">Position</div>
+    <div class="role">Role</div>
+  </div>
+  <div class="body">
+    <div class="member">
+      <div class="name">
+        <img src="" alt="User avatar" title="User avatar">
+        <div>Herbert Sutton</div>
+      </div>
+      <div class="position">
+        <input type="text" name="position" placeholder="i.e Vocalist, Guitarist">
+      </div>
+      <div class="role">
+        <select name="role">
+          <option value="1">Admin</option>
+          <option value="2">Not an admin</option>
+        </select>
+      </div>
+    </div>
+    <div class="inviteBlock">
+      <div class="header">Add another member</div>
+      <div class="label">Enter the name or e-mail of your band member</div>
+      <div class="input">
+        <input type="text" name="username" placeholder="Name or email address" #username>
+        <button class="button standard red" [disabled]="!username.value">Send invite</button>
+      </div>
+    </div>
+    <button class="button standard red">Complete</button>
+  </div>
+</div>

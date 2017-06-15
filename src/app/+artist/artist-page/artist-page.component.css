@@ -1,0 +1,56 @@
+.contentWrapper {padding: 18px 0; background: #f1f1f1;}
+.content {width: 1070px; display: flex; margin: 0 auto; padding: 18px 29px; box-sizing: border-box; background: #fff; border-radius: 2px;}
+
+.content .title {font: 14px/18px KarlaBold, sans-serif; text-transform: uppercase; letter-spacing: 2px;}
+.content .title, .content > .right .about {color: #333;}
+
+.content > .left {width: 679px; border-right: 1px solid #dedede;}
+.content > .left .head {display: flex; height: 64px;}
+.content > .left .head .title {width: 58px; line-height: 66px;}
+.content > .left .head .settings {display: flex; justify-content: flex-end; align-items: center; width: 621px; padding: 0 16px; box-sizing: border-box;}
+.content > .left .head .optionName, .content > .left .head .sortingCondition {color: #4a4a4a;}
+.content > .left .head .optionName {font: 14px Karla, sans-serif;}
+.content > .left .head .sortingCondition {width: 142px; height: 37px; margin-left: 14px; padding: 0 24px 0 16px; border: 1px solid #dcdcdc; border-radius: 1px; background: transparent url(../../../assets/img/icon-select-arrow-down.png) no-repeat 90% center; font: 14px/17px Karla, sans-serif; -webkit-appearance: none; -moz-appearance: none; transition: box-shadow .5s;}
+.content > .left .head .sortingCondition:hover, .content .left .info .share:hover, .content .left .info a:hover {box-shadow: 0 0 2px rgba(0, 0, 0, .3); cursor: pointer;}
+
+.content .noSongs {font: 17px/50px Karla, sans-serif; color: #4a4a4a; text-align: center;}
+
+.content .left .song {display: flex; align-items: center; min-height: 210px; box-sizing: border-box; border-top: 1px solid #dedede;}
+.content .left .cover {position: relative; width: 179px; height: 179px;}
+.content .left .cover.noArtwork:before {position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box; box-shadow: inset 0 0 0 60px #dcdcdc; border-radius: 50%; content: "";}
+.content .left .cover img {display: block; width: 100%; height: 100%;}
+.content .left .cover .play {position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 40px; height: 40px; margin: auto; box-sizing: border-box; border: 2px solid #fff; border-radius: 50%; background: rgba(240, 56, 85, .7) url(../../../assets/img/icon-play-white.png) no-repeat 13px center; transition: background-color .5s, box-shadow .5s;}
+.content .left .cover .play:hover {background-color: #ff0930; box-shadow: 0 0 3px #fff; cursor: pointer;}
+.content .left .cover .timing {position: absolute; left: 0; bottom: 14px; width: 100%; font: 13px/15px Karla, sans-serif; color: #fff; text-align: center;}
+
+.content .left .info {width: 480px; padding: 0 0 0 19px;}
+.content .left .info .name {font: 19px/22px Karla, sans-serif; color: #000;}
+.content .left .info .description {margin-top: 7px; font-size: 0; color: #a8b2be;}
+.content .left .info .description span {display: inline-block; margin-right: 10px; font: 12px/17px OpenSans, sans-serif;}
+.content .left .info div.promote {display: flex; height: 36px; margin: 16px 0px 16px;}
+.content .left .info .count {margin: 0 16px; font: 12px/19px OpenSans, sans-serif; color: #4a4a4a;}
+.content .left .info a {width: 36px; height: 36px; margin-right: 9px; border-radius: 50%; transition: box-shadow .5s;}
+.content .left .info .share {display: block; width: 70px; height: 28px; padding: 0 0 0 16px; box-sizing: border-box; background: transparent url(../../../assets/img/icon-share.png) no-repeat 7px center; border: 1px solid #dcdcdc; border-radius: 1px; font: 12px/14px Karla, sans-serif; color: #4a4a4a; transition: box-shadow .5s;}
+
+.content > .right {width: 332px; padding: 26px 0 0;}
+.content > .right > div:not(.promoters) {margin: 10px 0 0 30px;}
+.content > .right .about {padding: 11px 15px 6px 0; font: 14px/22px OpenSans, sans-serif;}
+.content > .right .members > div {position: relative; min-height: 50px; margin-top: 16px; padding: 7px 0 7px 63px; box-sizing: border-box;}
+.content > .right .members img {position: absolute; top: 0; left: 0; bottom: 0; display: block; width: 50px; height: 50px; margin: auto; border-radius: 50%;}
+.content > .right .name {font: 16px/19px Karla, sans-serif; color: #000;}
+.content > .right .role {font: 11px/17px OpenSans, sans-serif; color: #9b9b9b; letter-spacing: .4px;}
+
+.content > .right .requestToBeAMember {margin: 11px 0 40px;}
+.content > .right .requestToBeAMember button, .content > .right .requestToBeAMember span {display: block; width: 200px; height: 28px; text-transform: none; font: 14px/16px Karla, sans-serif;}
+.content > .right .requestToBeAMember button {padding-left: 26px; letter-spacing: 0; border-radius: 1px; background-image: url(../../../assets/img/icon-user-male.png); background-repeat: no-repeat; background-position: 8px center;}
+.content > .right .requestToBeAMember button:hover {background-image: url(../../../assets/img/icon-user-male-white.png);}
+.content > .right .requestToBeAMember span {box-sizing: border-box; text-align: center; line-height: 28px; border: 1px solid #4a4a4a; border-radius: 1px;}
+.content > .right .requestToBeAMember .loading {background: url(../../../assets/img/spinner.gif) no-repeat 35px center; background-size: 15px;}
+
+.content > .right .link {float: right; letter-spacing: 0; font: 12px OpenSans, sans-serif;}
+
+.content > .right .promoters {display: flex; flex-wrap: wrap; justify-content: flex-start; margin-top: 21px; padding-left: 20px;}
+.content > .right .promoters > div {position: relative; width: 52px; height: 52px; margin: 0 0 13px 10px;}
+.content > .right .promoters img {display: block; width: 100%; height: 100%; box-sizing: border-box; border-radius: 50%; border: 1px solid #fff;}
+.content > .right .promoters .playing:after {position: absolute; right: 2px; bottom: 0; display: block; width: 22px; height: 22px; box-sizing: border-box; border: 1px solid #fff; background: #61a216 url(../../../assets/img/icon-note.png) no-repeat center center; border-radius: 50%; content: "";}
+.content > .right .promoters .marked img {box-shadow: 0 0 0 2px #61a216;}

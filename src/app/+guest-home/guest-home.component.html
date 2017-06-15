@@ -1,0 +1,5 @@
+<guest-home-page></guest-home-page>
+<popup (onclose)="closePopup()" *ngIf="showPopup" [class.visible]="showPopup" [active]="showPopup">
+  <popup-login *ngIf="showPopup && popupName === 'login'" (onclose)="closePopup()"></popup-login>
+  <popup-registration *ngIf="showPopup && popupName === 'registration'" (onclose)="closePopup()"></popup-registration>
+</popup>

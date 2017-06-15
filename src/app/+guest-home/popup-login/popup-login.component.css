@@ -1,0 +1,24 @@
+.login {position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 370px; height: 435px; margin: auto; padding: 30px 30px 25px; box-sizing: border-box; background: #fff; overflow: hidden; border-radius: 4px;}
+
+.simple {text-align: center; font: 14px/22px OpenSans, sans-serif;}
+.facebook {display: block; width: 100%; height: 45px; margin: 15px 0 20px; padding-left: 34px; box-sizing: border-box; text-align: center; text-decoration: none; text-transform: uppercase; color: #fff; font: 12px/46px OpenSans, sans-serif; letter-spacing: 1.5px; background: #3c5798 url(../../../assets/img/fb.png) no-repeat 51px 12px; border-radius: 4px; transition: background-color .5s;}
+.facebook:hover {background-color: #5974b7; cursor: pointer;}
+
+form {display: block; margin: 14px 0 18px; overflow: hidden; border-radius: 6px; border: 2px solid #eee;}
+form > div {position: relative; height: 51px; padding-left: 45px;}
+form > div:before {position: absolute; top: 0; bottom: 0; left: 0; display: block; width: 45px; height: 100%; content: ""; background-position: center; background-repeat: no-repeat;}
+form > div:not(:last-child) {border-bottom: 1px solid #eee;}
+form > .success {background-color: rgba(130, 253, 186, .74);}
+form > .error {background-color: rgba(255, 123, 123, .74)}
+form > .name:before {background-image: url(../../../assets/img/forms-icon-name.png);}
+form > .email:before {background-image: url(../../../assets/img/forms-icon-email.png);}
+form > .password:before {background-image: url(../../../assets/img/forms-icon-password.png);}
+form input {display: block; width: 100%; height: 100%; padding: 0 5px; box-sizing: border-box; border:none; background: transparent; font: 13px OpenSans, sans-serif; color: #9b9b9b; outline: none;}
+
+.send {width: 100%; margin-bottom: 15px;}
+
+.forgotPassword, .newUser {font: 13px Karla, sans-serif; text-align: center;}
+.forgotPassword a, .newUser a {color: #4990E2;}
+.newUser {margin-top: 20px;}
+
+.noUserSelect {user-select: none; -webkit-user-select: none; -moz-user-select: none; -o-user-select: none; -ms-user-select: none;}

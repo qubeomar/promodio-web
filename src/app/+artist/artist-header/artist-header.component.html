@@ -1,0 +1,35 @@
+<div class="header container" *ngIf="artistInfo">
+  <img [src]="artistInfo.avatar || '../../../assets/img/default_avatar.jpg'" alt="Artist image">
+  <div class="firstLine">
+    <div class="left">
+      <div class="name">{{ artistInfo.name }}</div>
+      <div class="genre">
+        <span *ngFor="let genreID of artistInfo.genres">{{ genres[genreID] }}</span>
+      </div>
+      <div class="country">{{ countries[artistInfo.country] }}</div>
+    </div>
+    <div class="right">
+      <div class="imgItem" *ngFor="let image of preparedImages; let i = index">
+        <img [src]="image.url" alt="image name">
+        <button class="open" (click)="showPreviewer(i)" *ngIf="i < 2 || images.length < 4">Open</button>
+        <button class="showPreviewer" (click)="showPreviewer(i)" *ngIf="i == 2 && images.length > 3">
+          <span class="count">+{{ images.length - 3 }}</span>
+          <span class="text">View all</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="secondLine">
+    <div class="left">
+      <div>
+        <div class="count">{{ artistInfo.promoterCount || 0 }}</div>
+        <div class="subject">promoters</div>
+      </div>
+      <div>
+        <div class="count">{{ artistInfo.songCount || 0 }}</div>
+        <div class="subject">songs</div>
+      </div>
+    </div>
+    <button class="shareThisArtist">Share this artist</button>
+  </div>
+</div>

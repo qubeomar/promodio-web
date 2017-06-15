@@ -1,0 +1,35 @@
+.registration {position: fixed; top: 0; right: 0; bottom: 0; left: 0; display: flex; flex-direction: row; justify-content: center;align-items: center; width: 710px; height: 420px; margin: auto; border-radius: 4px;}
+
+.registration > div {height: 100%;}
+.registration > .left {width: 340px; box-sizing: border-box; padding: 69px 80px 30px 40px; background: #f1f1f1;}
+.registration > .left > div {width: 100%; color: #333;}
+.registration > .left .title {font: 31px/36px Karla, sans-serif;}
+.registration > .left .description {margin-top: 22px; font: 16px/26px OpenSans, sans-serif;}
+
+.registration > .right {width: 370px; height: 100%; padding: 30px 30px 25px; box-sizing: border-box; background: #fff;}
+.registration > .right .simple {text-align: center; font: 14px/22px OpenSans, sans-serif;}
+.registration > .right .facebook {display: block; width: 100%; height: 45px; margin: 15px 0 20px; padding-left: 34px; box-sizing: border-box; text-align: center; text-decoration: none; text-transform: uppercase; color: #fff; font: 12px/46px OpenSans, sans-serif; letter-spacing: 1.5px; background: #3c5798 url(../../../assets/img/fb.png) no-repeat 51px 12px; border-radius: 4px; transition: background-color .5s;}
+.registration > .right .facebook:hover {background-color: #5974b7; cursor: pointer;}
+
+.registration form {display: block; margin: 14px 0 18px; overflow: hidden; border-radius: 6px; border: 2px solid #eee;}
+.registration form > div {position: relative; height: 51px; padding-left: 45px;}
+.registration form > div:before {position: absolute; top: 0; bottom: 0; left: 0; display: block; width: 45px; height: 100%; content: ""; background-position: center; background-repeat: no-repeat;}
+.registration form > div:not(:last-child) {border-bottom: 1px solid #eee;}
+.registration form .ng-valid {color: #49966c;}
+.registration form .ng-touched.ng-invalid, .registration form .error {color: rgba(255, 123, 123, 1)}
+.registration form > .name:before {background-image: url(../../../assets/img/forms-icon-name.png);}
+.registration form > .email:before {background-image: url(../../../assets/img/forms-icon-email.png);}
+.registration form > .password:before {background-image: url(../../../assets/img/forms-icon-password.png);}
+.registration form input {display: block; width: 100%; height: 100%; padding: 0 5px; box-sizing: border-box; border:none; background: transparent; font: 13px OpenSans, sans-serif; color: #9b9b9b; outline: none;}
+
+.registration > .right .button {width: 100%;}
+.registration > .right .send {display: block; width: 100%; height: 50px; border: none; background: #ef1d49; border-radius: 4px; text-transform: uppercase; color: #fff; font: 15px KarlaBold, sans-serif; letter-spacing: 1px; transition: background .5s;}
+.registration > .right .send:hover {background: #ff0035; cursor: pointer;}
+
+.registration .success {display: flex; justify-content: center; align-items: center; flex-direction: column; width: 100%; background: #fff;}
+.registration .success .head, .registration .success .body {color: #4a4a4a;}
+.registration .success .head {font: 20px/50px LatoBold, sans-serif;}
+.registration .success .body {font: 16px/20px Lato, sans-serif;}
+.registration .success .button {margin-top: 15px;}
+
+.noUserSelect {user-select: none; -webkit-user-select: none; -moz-user-select: none; -o-user-select: none; -ms-user-select: none;}

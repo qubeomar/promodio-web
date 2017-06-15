@@ -1,0 +1,19 @@
+<user-bar></user-bar>
+<artist-header
+  (onArtistImagesReady)="onArtistImagesReady($event)"
+  (onShowPreview)="openPopup($event)"></artist-header>
+<div class="contentWrapper container" *ngIf="!!images">
+  <div class="content">
+    <div class="title">Gallery</div>
+    <div class="images">
+      <div class="noPhoto" *ngIf="!images.length">No uploaded photo :(</div>
+      <div class="image" *ngFor="let image of images">
+        <img [src]="image.url" alt="{{ image.name }}">
+        <button (click)="openPopup(image.id)">Open</button>
+      </div>
+    </div>
+  </div>
+</div>
+<popup (onclose)="closePopup()" *ngIf="isPopupOpen && selectedImageID && images.length" [class.visible]="isPopupOpen && selectedImageID" [active]="isPopupOpen && selectedImageID">
+  <artist-previewer [imageID]="selectedImageID" [images]="images"></artist-previewer>
+</popup>

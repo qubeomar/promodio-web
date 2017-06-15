@@ -1,0 +1,10 @@
+.title {height: 75px; padding: 0 30px; font: 18px/74px Karla, sans-serif;}
+
+.fields {padding: 22px 30px 40px;}
+.fields > div {margin-bottom: 21px;}
+
+.name {font: 15px/18px Karla, sans-serif;}
+.details {font: 12px/30px OpenSans, sans-serif; color: #a8b2be;}
+.fields input, .fields textarea {width: 481px; box-sizing: border-box; background: transparent; border: 1px solid #dbdbdb; border-radius: 3px; font: 14px OpenSans, sans-serif; color: #333; transition: border-color .5s;}
+.fields input {height: 50px; margin-top: 5px; padding: 0 15px;}
+.fields textarea {height: 190px; margin-top: 10px; padding: 15px; resize: none;}

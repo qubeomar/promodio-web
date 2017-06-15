@@ -1,0 +1,62 @@
+<div [class]="'userBar container' + (style ? ' ' + style : ' default')">
+  <div class="left">
+    <a [routerLink]="['/']" class="logo" title="To the main page"></a>
+    <a [routerLink]="['/go-on-air']" class="onAir" title="On Air" *ngIf="style !== 'transparent'"></a>
+    <a [routerLink]="['/home']" class="home" title="Home" *ngIf="style !== 'transparent'">Home</a>
+    <a [routerLink]="['/about']" class="menuLink" *ngIf="style === 'transparent'">About</a>
+    <a [routerLink]="['/how-it-works']" class="menuLink" *ngIf="style === 'transparent'">How it works</a>
+  </div>
+  <div class="right" *ngIf="userInfo">
+    <input class="search" placeholder="Search for users, songs & artists">
+    <button class="notifications" (click)="notificationsDropdownToggle($event)">
+      <span *ngIf="notifications.length">{{ notifications.length }}</span>
+      <div class="dropdown" *ngIf="isNotificationsDropdownActive">
+        <div class="head">
+          <div>
+            <div class="title">Your current credits</div>
+            <div class="count">0</div>
+            <div class="details"></div>
+          </div>
+        </div>
+        <div class="title">Recent credit activities</div>
+        <div class="body"><div *ngFor="let notification of notifications">
+          <div class="text">{{ notification.text }}</div>
+          <div class="dynamic" [ngClass]="notification.value > 0 ? 'positive' : 'negative'">{{ notification.value }}</div>
+        </div></div>
+        <a class="viewAll" [routerLink]="['/settings/notifications']" *ngIf="notifications.length">View all</a>
+      </div>
+    </button>
+    <div class="user">
+      <img [src]="'../../../assets/img/default_avatar.jpg'" alt="User's avatar" (click)="userDropdownToggle($event)">
+      <div class="dropdown" *ngIf="isUserDropdownActive">
+        <div class="name">{{ userInfo.name }}</div>
+        <a class="item" [routerLink]="['/account/profile']">View Profile</a>
+        <a class="item" [routerLink]="['/account/settings']">Account Settings</a>
+        <button class="item" (click)="logout()">Logout</button>
+        <div
+          class="createArtistProfileText"
+          *ngIf="!userInfo.artistIds.length && currentURL !== '/artist/registration'"
+        >Are you an artist? Set up your artist profile page now</div>
+        <a
+          class="button red standard"
+          [routerLink]="['/artist/registration']"
+          *ngIf="!userInfo.artistIds.length && currentURL !== '/artist/registration'">Create artist profile</a>
+        <div class="artistInfo" *ngIf="userInfo.artistIds.length">
+          <img [src]="'../../../assets/img/default_avatar.jpg'" alt="Artist avatar" title="Artist avatar">
+          <div class="title">Your artist pages</div>
+          <a
+            class="artistName"
+            [routerLink]="['/artist/' + artistId]"
+            *ngFor="let artistId of userInfo.artistIds">{{ artistId }}</a>
+        </div>
+        <a class="item" [routerLink]="['/artist/' + this.artistID]">View profile</a>
+        <a class="item" [routerLink]="['/dashboard/' + this.artistID]">Dashboard</a>
+      </div>
+    </div>
+  </div>
+  <div class="right unauthorized" *ngIf="!userInfo">
+    <a class="button little red" [routerLink]="['/registration']">Signup</a>
+    <a class="button little white" [routerLink]="['/login']">Login</a>
+  </div>
+</div>
+    

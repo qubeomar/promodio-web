@@ -1,0 +1,17 @@
+.header {padding: 20px 106px; box-sizing: border-box;}
+.firstLine {display: flex; align-items: center; flex-shrink: 0; height: 99px; border-bottom: 1px solid #d8d8d8; border-radius: 3px 3px 0 0; background: #fff;}
+.firstLine img {width: 60px; height: 60px; margin: 0 20px 0 29px;}
+.firstLine .artistName {width: 800px; height: 100%; font: 24px/104px Roboto; letter-spacing: 3.3px;}
+.firstLine a {width: 120px; height: 42px; margin-left: 8px; border: 1px solid #ddd; border-radius: 3px; color: #4a4a4a; text-decoration: none; text-align: center; font: 15px/41px Roboto; letter-spacing: .2px; background: transparent; transition: box-shadow .5s, text-shadow .5s;}
+.firstLine a:hover {box-shadow: 0 0 5px #ddd; text-shadow: 0 0 3px #ddd; cursor: pointer;}
+
+.secondLine {display: flex; height: 120px; border-radius: 0 0 3px 3px; background: #fff;}
+.secondLine > div {flex-grow: 1; padding: 20px 0; text-align: center;}
+.secondLine > div:not(:last-child) {border-right: 1px solid #d8d8d8;}
+.secondLine .title {font: 11px/18px Roboto; text-transform: uppercase; letter-spacing: 1.5px; color: #a8b2be;}
+.secondLine .count {display: flex; justify-content: center; align-items: center;}
+.secondLine .count .value {font: 24px/43px Roboto;}
+.secondLine .count .dynamic {margin-left: 12px; padding: 1px 5px 1px 16px; border: 1px solid; border-radius: 3px; font: 13px Roboto; background: transparent no-repeat 3px center;}
+.secondLine .count .positive {border-color: #7ed321; color: #7ed321; background-image: url(../../../../assets/img/arrow_up_green.png);}
+.secondLine .count .negative {border-color: #d39221; color: #d39221; background-image: url(../../../../assets/img/arrow_down_red.png);}
+.secondLine .link {font: 14px OpenSans;}

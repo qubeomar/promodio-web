@@ -1,0 +1,23 @@
+.title {height: 75px; padding: 0 30px; font: 18px/72px Karla, sans-serif;}
+
+.noImage {padding: 50px 180px 53px 180px; text-align: center;}
+.noImage > div {min-height: 400px; padding-top: 200px; box-sizing: border-box; border-radius: 2px; border: 2px dotted transparent; background: #f1f1f1 url(../../../../assets/img/artist-registration-no-image.png) no-repeat center 148px; color: #a8b2be; font: 15px/24px OpenSans, sans-serif; transition: border-color .5s;}
+.noImage > div.active {border-color: #9cbeff;}
+.noImage > button {margin-top: 29px; background: transparent; border: none; text-decoration: underline; font: 14px/19px OpenSans, sans-serif;}
+.noImage .error {display: flex; justify-content: center; align-items: center; height: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #f00;}
+
+.crop .button, .result .button {display: block; height: 45px; margin: 34px auto 0; padding: 10px 5px; border-radius: 3px; font: 15px/20px Karla, sans-serif; letter-spacing: 1.2px;}
+
+.crop {padding: 45px 30px 47px 30px;}
+.crop .imageWrapper {display: flex; justify-content: center; align-items: center; height: 401px; margin: 0 auto 20px; overflow: hidden;}
+.crop .imageWrapper:empty {background: url(../../../../assets/img/spinner.gif) no-repeat center; background-size: 20px;}
+.crop .imageWrapper img {}
+.crop .description {text-align: center; color: #a8b2be; font: 14px/20px OpenSans, sans-serif;}
+.crop .link {margin-left: 10px; background: transparent; border: none; font-size: 14px;}
+
+.result {padding: 46px 180px 57px 180px;}
+.result img {display: block; width: 100%; height: 400px; border: none; border-radius: 3px;}
+.result .controls {margin: 23px 0 40px; text-align: center;}
+.result .controls button {margin: 0 5px; background: transparent; border: none; font-size: 14px; letter-spacing: .2px;}
+.result .controls button:last-child {}
+

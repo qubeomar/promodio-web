@@ -1,0 +1,27 @@
+.title {height: 75px; padding: 0 30px; font: 18px/74px Karla, sans-serif;}
+
+.noAudio {padding: 46px 180px 57px 180px; text-align: center;}
+.noAudio > div {min-height: 400px; padding-top: 200px; box-sizing: border-box; border: 2px dotted transparent; font: 15px/24px OpenSans, sans-serif; color: #a8b2be; background: #f1f1f1 url(../../../../assets/img/artist-registration-no-audio.png) no-repeat center 148px; transition: border-color .5s;}
+.noAudio > div.active {border-color: #9cbeff;}
+.noAudio > button {margin-top: 28px; background: transparent; border: none; font-size: 15px; letter-spacing: .4px;}
+.noAudio .error {display: flex; justify-content: center; align-items: center; height: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #f00;}
+
+.audioInfo {position: relative; display: flex; padding: 22px 30px 35px 30px;}
+.audioInfo > .left {width: 471px;}
+.audioInfo > .right {width: 230px; padding-left: 30px; box-sizing: border-box;}
+
+.subTitle {font: 15px/18px Karla, sans-serif; color: #000;}
+.audio {margin: 18px 0 26px 0; padding-left: 47px; background: url(../../../../assets/img/artist-registration-audio-info.png) no-repeat 0 center;}
+.audio .name {font: 14px/19px OpenSans, sans-serif; color: #333;}
+.audio .size {font: 12px/17px OpenSans, sans-serif; color: #a8b2be;}
+.audioInfo > .left > input {display: block; width: 100%; height: 52px; margin: 11px 0 34px 0; padding: 0 10px; box-sizing: border-box; border: 1px solid #dbdbdb; border-radius: 4px; background: transparent; color: #a8b2be; transition: box-shadow .5s; -webkit-box-shadow: 0 0 0 30px white inset !important;}
+.audioInfo > .left > input:focus {box-shadow: 0 0 3px rgba(173, 173, 173, .49);}
+
+.subTitle.agreementBlock {display: flex;}
+.subTitle.agreementBlock span {margin-left: 8px;}
+
+.description {margin: 7px 0 26px; font: 14px/21px OpenSans, sans-serif; color: #a8b2be;}
+
+.right .dropArea {position: relative; height: 200px; margin-top: 15px; padding-top: 98px; box-sizing: border-box;  background: #f1f1f1 url(../../../../assets/img/artist-registration-no-image.png) no-repeat center 48px; border-radius: 2px; font: 13px/20px OpenSans,sans-serif; text-align: center; color: #a8b2be;}
+.right .dropArea img {position: absolute; top: 0; right: 0; bottom: 0; left: 0; width: 100%; margin: auto;}
+.right .dropArea .error {color: #f00;}

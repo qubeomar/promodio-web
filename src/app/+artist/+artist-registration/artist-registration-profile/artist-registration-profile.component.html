@@ -1,0 +1,53 @@
+<div class="title">Profile info</div>
+<div class="fields">
+  <div>
+    <div class="name">Name</div>
+    <div class="details">Your artist profile URL: {{ nameInput.value || '' }}</div>
+    <input type="text" name="name" [formControl]="nameField" #nameInput>
+  </div>
+  <div>
+    <div class="name">Genres</div>
+    <div class="details">You can add up to 3 type of genres</div>
+    <rl-tag-input
+      [(ngModel)]="genresList"
+      [addOnBlur]="false"
+      [autocomplete]="true"
+      [autocompleteItems]="allowedGenres"
+      [autocompleteMustMatch]="true"
+      [placeholder]="''"
+      (addTag)="addGenre($event)"
+      (removeTag)="removeGenre($event)"
+      ></rl-tag-input>
+  </div>
+  <div>
+    <div class="name">Country</div>
+    <div class="details">The country of your origin</div>
+    <rl-tag-input
+      [(ngModel)]="selectedCountry"
+      [addOnBlur]="false"
+      [autocomplete]="true"
+      [autocompleteItems]="allowedCountries"
+      [autocompleteMustMatch]="true"
+      [placeholder]="''"
+      (addTag)="rewriteCountry($event)"
+      (removeTag)="removeCountry($event)"
+    ></rl-tag-input>
+  </div>
+  <div>
+    <div class="name">About</div>
+    <textarea name="description" [formControl]="descriptionField"></textarea>
+  </div>
+  <button
+    class="button standard red"
+    [disabled]="
+      nameField.hasError('incorrect')
+      ||
+      descriptionField.hasError('incorrect')
+      ||
+      !selectedGenres.length
+      ||
+      !selectedCountry.length
+    "
+    (click)="submitStage()"
+  >Continue</button>
+</div>

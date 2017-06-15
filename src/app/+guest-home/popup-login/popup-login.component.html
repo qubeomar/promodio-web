@@ -1,0 +1,21 @@
+<div class="login popupContent" [class.loading]="isLoading">
+  <button class="close" (click)="closePopup()"></button>
+  <div class="simple">Welcome back!</div>
+  <a class="facebook noUserSelect" [routerLink]="['/registration-facebook']">Login with Facebook</a>
+  <div class="simple">or login with email</div>
+  <form [formGroup]="loginForm">
+    <div class="field email">
+      <input type="text" name="name" placeholder="Name" [formControl]="username">
+    </div>
+    <div class="field password">
+      <input type="password" name="password" placeholder="Password" [formControl]="password">
+    </div>
+  </form>
+  <button
+    class="button standard red send noUserSelect"
+    (click)="check()"
+    [disabled]="username.hasError('incorrectText') || password.hasError('incorrectPassword')"
+  >Login</button>
+  <div class="forgotPassword"><a class="forgotPassword" [routerLink]="['/forgot-password']">Forgot password?</a></div>
+  <div class="newUser">Don't have an account yet? <a [routerLink]="['/registration']">Sign up now</a></div>
+</div>

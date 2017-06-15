@@ -1,0 +1,37 @@
+.header {background: #000;}
+.headerContent {width: 1280px; height: 500px; margin: 0 auto 79px; background: url(../../../assets/img/guest-home-header.jpg) no-repeat 0 0;}
+
+.headLine {display: flex; flex-direction: row; flex-wrap: nowrap;}
+
+.headLine .left {display: flex; flex-direction: row; flex-wrap: nowrap; width: 860px; height: 58px; padding-left: 110px;}
+.headLine .left > * {height: 100%;}
+.headLine .left .logo {width: 135px; margin-right: 5px; background: url(../../../assets/img/logo.svg) no-repeat center;}
+.headLine .left a {padding: 0 10px; color: #fff; text-decoration: none; font: 600 16px/62px OpenSans, sans-serif;}
+
+.headLine .right {display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; width: 308px; height: 72px; padding: 0 2px; box-sizing: border-box;}
+.headLine .right > a {width: 82px; height: 30px; border-radius: 4px; border: 1px solid #fff; text-transform: uppercase; text-decoration: none; text-align: center; font: normal 11px/32px Karla, sans-serif; letter-spacing: 1px; transition: box-shadow .5s;}
+.headLine .right > a:not(:last-child) {margin-right: 10px;}
+.headLine .right > a:hover {box-shadow: 0 0 8px #fff; cursor: pointer;}
+.headLine .right .signup {background: #fff; color: #171717; font-family: KarlaBold; letter-spacing: 2px;}
+.headLine .right .login {color: #fff;}
+
+.header .title {margin: 71px 0 26px; font: normal 34px/40px Karla, sans-serif; color: #fff; text-align: center; letter-spacing: .6px;}
+.header .description {font: normal 20px/28px OpenSans, sans-serif; color: #fff; text-align: center;}
+
+.header .goOnAir {position: relative; display: block; width: 154px; height: 60px; margin: 41px auto 0; padding-left: 71px; text-transform: uppercase; text-decoration: none; color: #fff; font: 16px/62px Karla, sans-serif; letter-spacing: 1px; border-radius: 4px; background: #ef1d49; transition: box-shadow .5s;}
+.header .goOnAir:hover {box-shadow: 0 0 8px #fff; cursor: pointer;}
+
+.header .goOnAir:before, .header .goOnAir:after {position: absolute; top: 0; bottom: 0; display: block; margin: auto; content: "";}
+.header .goOnAir:before {left: 33px; z-index: 2; width: 11px; height: 11px; background: #fff; border-radius: 50%; border: 3px solid #ef1d49; box-shadow: 0 0 0 2px #fbd4da;}
+.header .goOnAir:after {left: 26px; z-index: 1; width: 27px; height: 27px; border-radius: 50%; border: 2px solid #fbd4da; background: #ef1d49;}
+
+.body .title {text-align: center; font: 18px/22px Karla, sans-serif; text-transform: uppercase; letter-spacing: 1.5px;}
+.body .topItems {display: flex; flex-direction: row; align-items: stretch; flex-wrap: wrap; width: 945px; margin: 20px auto 0;}
+.body .topItems > div {width: 155px; margin: 19px 17px;}
+.body .topItems > div img {display: block; width: 100%; height: 155px; margin-bottom: 9px;}
+.body .topItems > div .name {font: 15px/20px Karla, sans-serif; letter-spacing: .3px; color: #000;}
+.body .topItems > div .author, .body .topItems > div .counter {font: 13px OpenSans, sans-serif; color: #4a4a4a;}
+.body .topItems > div .author {line-height: 24px;}
+.body .topItems > div .counter {line-height: 17px;}
+
+.noUserSelect {user-select: none; -webkit-user-select: none; -moz-user-select: none; -o-user-select: none; -ms-user-select: none;}

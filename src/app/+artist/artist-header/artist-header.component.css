@@ -1,0 +1,33 @@
+.header {position: relative; padding: 75px 105px 0 329px; box-sizing: border-box; background: linear-gradient(to bottom, #353535 0, #353535 200px, #fff 201px);}
+.header > img {position: absolute; top: 56px; left: 104px; display: block; width: 193px; height: 191px; border: 4px solid #fff; border-radius: 4px;}
+.firstLine {display: flex; flex-direction: row; min-height: 121px;}
+.secondLine {display: flex; min-height: 64px;}
+
+.firstLine .left {width: 532px;}
+.firstLine .left > div {color: #fff;}
+.left .name {margin: 15px 0 1px; font: 30px/36px Karla, sans-serif;}
+.left .name:after {width: 23px; height: 23px; margin-left: 8px; line-height: 39px; content: url(../../../assets/img/icon-verified.png);}
+.left .genre, .left .country {margin-bottom: 4px; font: 14px/19px OpenSans, sans-serif;}
+
+.firstLine .right {display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-end; width: 314px; height: 97px;}
+.imgItem {position: relative; width: 97px; height: 97px; overflow: hidden; border-radius: 3px;}
+.imgItem > img {display: block; width: 100%; height: 100%; border: none;}
+.imgItem:not(:last-child) {margin-right: 12px;}
+
+.imgItem .open {position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; opacity: 0; border: none; background: rgba(239, 239, 239, .63); font: 12px/14px Karla, sans-serif; color: #4a4a4a; transition: opacity .5s;}
+.imgItem .open:hover {opacity: 1; cursor: pointer;}
+
+.imgItem .showPreviewer {position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; background: rgba(148, 148, 148, .64); color: #fff; cursor: pointer; transition: background .5s;}
+.imgItem .showPreviewer:hover {background: rgba(113, 113, 113, .79);}
+.imgItem .showPreviewer span {display: block;}
+.imgItem .showPreviewer .count {margin-top: 12px; letter-spacing: 2px; font: 28px/35px Lato, sans-serif;}
+.imgItem .showPreviewer .text {margin-top: 4px; font: 14px/19px OpenSans, sans-serif;}
+
+.secondLine .left {width: 700px; display: flex;}
+.secondLine .left > div {display: flex; justify-content: center; align-items: center;}
+.secondLine .left > div:not(:last-child) {margin-right: 30px;}
+.secondLine .left .count {font: 16px/19px Karla, sans-serif; color: #000;}
+.secondLine .left .subject {margin-left: 4px; font: 14px/19px OpenSans, sans-serif; color: #4a4a4a;}
+
+.secondLine .shareThisArtist {display: block; width: 146px; height: 100%; padding-left: 40px; box-sizing: border-box; text-align: right; font: 14px/66px OpenSans, sans-serif; color: #9b9b9b; border: none; background: transparent url(../../../assets/img/icon-share.png) no-repeat 22px center; transition: color .5s, text-shadow .5s;}
+.secondLine .shareThisArtist:hover {color: #7b7b7b; text-shadow: 1px 1px 3px rgba(0, 0, 0, .4); cursor: pointer;}

@@ -1,0 +1,81 @@
+.userBar {display: flex; flex-direction: row; height: 56px; padding: 0 130px; box-sizing: border-box;}
+.userBar.default {background: #fff;}
+.userBar > div {display: flex; flex-direction: row; align-items: center; height: 100%;}
+.left {width: 644px;}
+.right {width: 376px;}
+
+.unauthorized {justify-content: flex-end;}
+.unauthorized > :last-child {margin-left: 10px;}
+
+.logo {width: 96px; height: 100%; cursor: pointer;}
+.default .logo {background: url(../../../assets/img/logo-colored.svg) no-repeat 0 center;}
+.transparent .logo {margin-right: 30px; background: url(../../../assets/img/logo.svg) no-repeat center 16px;}
+.onAir, .home {height: 28px;}
+.onAir {width: 82px; margin: 0 20px; background: url(../../../assets/img/user-bar-on-air.png) no-repeat 0 center; transition: background-color .5s;}
+.onAir:hover {background-color: #4a4a4a; cursor: pointer;}
+.home {width: 40px; font: 14px/30px KarlaBold, sans-serif; color: #4a4a4a; text-transform: uppercase; text-decoration: none; transition: color .5s, text-shadow .5s;}
+.home:hover {color: #f23148; text-shadow: 1px 1px 3px rgba(0, 0, 0, .5); cursor: pointer;}
+.menuLink {padding: 0 10px; color: #fff; text-decoration: none; font: 600 16px/62px OpenSans, sans-serif; transition: text-shadow .5s;}
+.menuLink:hover {text-shadow: 0 0 2px #fff;}
+
+.search {width: 276px; height: 40px; padding: 0 10px 0 40px; box-sizing: border-box; border-radius: 19px; border: 1px solid #dedede; background: url(../../../assets/img/user-bar-search.png) no-repeat 10px center; font: 14px OpenSans, sans-serif; color: #777; transition: border-color .5s, box-shadow .5s;}
+.notifications {position: relative; width: 40px; height: 40px; margin: 0 8px 0 11px; border: none; border-radius: 50%; background: #f1f1f1 url(../../../assets/img/user-bar-bell.png) no-repeat center; transition: box-shadow .5s;}
+.notifications span {position: absolute; top: -2px; right: -3px; z-index: -1; display: block; width: 18px; height: 18px; opacity: 0; background: #ef1d49; border-radius: 50%; font: 12px/19px KarlaBold, sans-serif; color: #fff; transition: opacity .7s;}
+.notifications span:not(:empty) {z-index: 1; opacity: 1;}
+
+.search:hover, .search:focus {border-color: #f23148;}
+.notifications:hover, .user > img, .user.active > img {box-shadow: 0 0 3px rgba(0, 0, 0, .5); cursor: pointer;}
+
+.user {position: relative; width: 40px; height: 40px;}
+.user > img {display: block; width: 100%; height: 100%; border-radius: 50%; cursor: pointer;}
+
+.transparent .unauthorized a {border-color: #fff; font-family: KarlaBold;}
+.transparent .unauthorized .red {background: #fff; color: #171717; letter-spacing: 2px}
+.transparent .unauthorized .red:hover {color: #fff; background: transparent;}
+.transparent .unauthorized .white {color: #fff; background: transparent; letter-spacing: 2px;}
+.transparent .unauthorized .white:hover {color: #171717; background: #fff;}
+
+.dropdown {position: absolute; top: 56px; right: 0; z-index: 1; width: 300px; box-sizing: border-box; background: #fff; border-radius: 4px; box-shadow: 0 2px 2px rgba(0, 0, 0, .17); cursor: default;}
+.dropdown:before {position: absolute; top: -6px; right: 14px; display: block; width: 12px; height: 12px; content: ""; transform: rotate(45deg);}
+.user .dropdown {padding: 5px 20px 10px;}
+.user .dropdown:before {background: #fff;}
+.notifications .dropdown:before {background: #4a90ea;}
+.user .dropdown > * {display: block;}
+.user .dropdown > *:not(.button) {width: 100%; font-family: Karla, sans-serif; color: #4a4a4a; text-decoration: none; background: transparent; border: none; text-align: left; transition: background .5s;}
+.dropdown .item, .dropdown .name {height: 35px; padding: 0 2px; box-sizing: border-box; font-size: 14px; line-height: 37px;}
+.dropdown .item:hover {background: rgba(247, 247, 247, 0.73); cursor: pointer;}
+.dropdown .name {font-family: KarlaBold;}
+
+.dropdown .createArtistProfileText, .dropdown .createArtistProfileLink {width: 230px;}
+.dropdown .createArtistProfileText {margin: 22px 0 12px; font: 14px/19px Karla, sans-serif; color: #333;}
+.dropdown .createArtistProfileLink {height: 50px; background: #ef1d49; border-radius: 4px; text-align: center; text-transform: uppercase; font: 15px/52px KarlaBold, sans-serif; color: #fff; letter-spacing: 1px; transition: background .5s;}
+.dropdown .createArtistProfileLink:hover {background: #ff0035; cursor: pointer;}
+
+.dropdown .artistInfo {position: relative; min-height: 50px; padding: 27px 7px 27px 65px; box-sizing: border-box;}
+.dropdown .artistInfo img {position: absolute; top: 0; bottom: 0; left: 0; width: 50px; height: 50px; margin: auto; border: none;}
+.dropdown .artistInfo .title, .dropdown .artistInfo .artistName {color: #4a4a4a;}
+.dropdown .artistInfo .title {font: 12px/14px Karla, sans-serif;}
+.dropdown .artistInfo .artistName {display: block; margin: 10px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 16px/16px KarlaBold, sans-serif;}
+
+.dropdown .item:not(:last-child), .dropdown .name, .dropdown .artistInfo, .dropdown > .title, .dropdown .body > div {border-bottom: 1px solid #979797;}
+
+.dropdown .head {display: flex; align-items: center; justify-content: center; width: 300px; height: 131px; border-radius: 4px 4px 0 0; background: #4a90ea url(../../../assets/img/dropdown-notifications-bg.png) no-repeat center 100%; text-align: center;}
+.dropdown .head > * {color: #fff;}
+.dropdown .head div .title {font: 12px/14px Karla, sans-serif;}
+.dropdown .head div .count {font: 39px/46px KarlaBold, sans-serif;}
+.dropdown .head div .details {font: 12px/14px Karla, sans-serif;}
+.dropdown > .title {min-height: 40px; font: 12px/42px Karla, sans-serif; color: #4a4a4a; text-transform: uppercase;}
+.dropdown .body:empty {position: relative; height: 190px;}
+.dropdown .body:empty:before, .dropdown .body:empty:after {position: absolute; right: 0; left: 0; margin: auto;}
+.dropdown .body:empty:before {top: 50px; width: 45px; height: 45px; background: #d8d8d8; content: ""; border-radius: 50%;}
+.dropdown .body:empty:after {top: 120px; width: 100%; height: 14px; font: 13px/16px Karla, sans-serif; color: #4a4a4a; text-align: center; content: "No recent activity";}
+
+.notifications .dropdown .body:not(:empty) {padding: 5px 20px 0;}
+.dropdown .body > div {display: flex; flex-direction: row; padding: 9px 0; font: 13px/17px OpenSans, sans-serif;}
+.dropdown .body .text {width: 225px; color: #4a4a4a; text-align: left;}
+.dropdown .body .dynamic {display: flex; justify-content: flex-end; width: 30px; text-align: right;}
+.dropdown .body .positive {color: #5ca30d;}
+.dropdown .body .negative {color: #f6a623;}
+
+.dropdown .viewAll {font: 14px/35px OpenSans, sans-serif; color: #4990e2; transition: color .5s;}
+.dropdown .viewAll:hover {color: #6eaaef; cursor: pointer;}

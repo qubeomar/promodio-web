@@ -1,0 +1,22 @@
+.popupContent {background: #fff;}
+.popupContent.horizontal {width: 750px; height: 650px;}
+.popupContent.vertical {width: 567px; height: 671px;}
+
+.popupContent.horizontal > .image {width: 100%; height: 480px;}
+.popupContent.vertical > .image {width: 100%; height: 480px;}
+.popupContent.loading .image {background: url(../../../assets/img/spinner.gif) no-repeat center; background-size: 30px;}
+
+.info {padding: 22px 30px 25px 30px;}
+.name, .description {color: #333;}
+.description, .peoples {font: 14px/22px OpenSans, sans-serif;}
+.name {font: 15px/21px KarlaBold, sans-serif;}
+.description {margin: 5px 0 4px 0;}
+.date, .date button {font: 13px/14px OpenSans, sans-serif; color: #a8b2be;}
+.date {margin-top: 13px;}
+.date button {display: inline-block; margin-left: 12px; border: none; background: none; transition: text-shadow .5s;}
+.date button:hover {text-shadow: 1px 1px 2px rgba(3, 3, 3, .4); cursor: pointer;}
+
+.previous, .next {position: fixed; top: 0; z-index: 200; width: 13vw; height: 100vh; border: none; background-color: transparent; background-position: center; background-repeat: no-repeat; transition: background-color .5s;}
+.previous {left: 0; background-image: url(../../../assets/img/icon-arrow-left.png);}
+.next {right: 0; background-image: url(../../../assets/img/icon-arrow-right.png);}
+.previous:hover, .next:hover {background-color: rgba(3, 3, 3, .4); cursor: pointer;}

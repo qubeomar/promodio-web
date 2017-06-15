@@ -1,0 +1,24 @@
+<user-bar></user-bar>
+<div class="header container standardBG">
+  <div class="firstLine">
+    <img src="" alt="Artist avatar" title="Artist avatar">
+    <div class="artistName">Tame Impala</div>
+    <a [routerLink]="['/artist/' + artistID]">View profile</a>
+  </div>
+  <div class="secondLine">
+    <div class="promoters">
+      <div class="title">Promoters</div>
+      <div class="count"><span class="value">128</span></div>
+      <a class="link" title="View all promoters">View all</a>
+    </div>
+    <div class="followers">
+      <div class="title">Followers</div>
+      <div class="count"><span class="value">346</span><span class="dynamic positive">4</span></div>
+      <a class="link" title="View all followers">View all</a>
+    </div>
+    <div class="totalPlays">
+      <div class="title">Total plays</div>
+      <div class="count"><span class="value">346</span></div>
+    </div>
+  </div>
+</div>

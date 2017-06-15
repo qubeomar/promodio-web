@@ -1,0 +1,31 @@
+<div class="header">
+  <div class="headerContent">
+    <user-bar [style]="'transparent'"></user-bar>
+    <!--div class="headLine">
+      <div class="left">
+        <div class="logo"></div>
+        <a [routerLink]="['/about']">About</a>
+        <a [routerLink]="['/how-it-works']">How it works</a>
+      </div>
+      <div class="right">
+        <a class="signup noUserSelect" [routerLink]="['/registration']">Signup</a>
+        <a class="login noUserSelect" [routerLink]="['/login']">Login</a>
+      </div>
+    </div-->
+    <div class="title">Turn unknown songs into a Hit</div>
+    <div class="description">Discover unknown songs, promote it, and make it a<br>worldwide hit. With Pomodio, YOU decide which songs<br>should be Popular.</div>
+    <a class="goOnAir noUserSelect" [routerLink]="['/on-the-air']">Go on air now</a>
+  </div>
+</div>
+<div class="body" *ngIf="isLoaded">
+  <div class="title">Top promoted songs this week</div>
+  <div class="topItems">
+    <div *ngFor="let topItem of topItems">
+      <img src="" alt="">
+      <div class="name">Sleepwalking</div>
+      <div class="author">Bring Me The Horizon</div>
+      <div class="counter">34 Promoters</div>
+    </div>
+  </div>
+</div>
+<loading-stub *ngIf="!isLoaded"></loading-stub>

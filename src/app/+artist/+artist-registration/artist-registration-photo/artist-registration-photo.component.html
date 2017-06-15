@@ -1,0 +1,31 @@
+<div class="title">Profile photo</div>
+<div class="body">
+  <div class="noImage" *ngIf="stateID === 0">
+    <div (dragover)="dragOver($event)"
+         (dragend)="dragEnd()"
+         (dragleave)="dragLeave()"
+         (drop)="drop($event)"
+         [class.active]="dragActive">
+      Drag photo here<br>JPG or PNG<br>Maximum {{ maxFileSize }}MB
+      <div class="error" *ngIf="error">{{ error }}</div>
+    </div>
+    <button class="link" (click)="submitStage()">Skip for now</button>
+  </div>
+  <div class="crop" *ngIf="stateID === 1">
+    <div class="imageWrapper"></div>
+    <div class="description">Edit thumbnail by moving and resizing the box.
+      <button class="link" (click)="changeStateID(0)">Upload another photo</button>
+    </div>
+    <button class="button red standard" (click)="crop()">Done editing</button>
+  </div>
+  <div class="result" *ngIf="stateID === 2">
+    <div class="image">
+      <img src="" alt="Profile photo">
+    </div>
+    <div class="controls">
+      <button class="link" (click)="changeStateID(0)">Upload another photo</button>
+      <button class="link" (click)="changeStateID(0)">Remove this photo</button>
+    </div>
+    <button class="button red standard" (click)="submitStage()">Continue</button>
+  </div>
+</div>
