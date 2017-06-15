@@ -18,6 +18,7 @@ variables:
   - name: APP_VERSION
     value: v0.1
 build:
+  skip: true
   compile:
     publish:
      - dist/
