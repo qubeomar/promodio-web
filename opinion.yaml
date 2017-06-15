@@ -33,13 +33,6 @@ isDefault: 'False'
 graml:
   version: 1.0
 graph:
-  build:
-    has:
-      - compile
-      - unittest
-    on_error:
-      - notify
-    next: bake
   bake:
     has:
       - docker_build
