@@ -6,3 +6,6 @@ Run on the test/product server:
 4. If project is behind the Apache/Nginx - use .htaccess file or routes to rewrite all requests to the frontend (except the file requests) to /dist/index.html file. If there is no web-server like Apache/Nginx you can use the build-in web-server by the command npm run server:prod ;
 
 Building the project requires installed node.js.
+
+
+change1
